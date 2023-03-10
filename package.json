@@ -3,6 +3,9 @@
 		"tailwindcss": "^3.2.7"
 	},
 	"scripts": {
-		"multi-theme": "npx tailwindcss -i ./src/multi-theme/style.css -o ./src/multi-theme/output.css --watch"
+		"how run ?": "npm run multi-theme",
+		"home-page": "npx tailwindcss -i ./src/tailwind.css -o ./src/style.css --watch",
+		"multi-theme": "npx tailwindcss -i ./src/multi-theme/tailwind.css -o ./src/multi-theme/style.css --watch",
+		"common-class": "npx tailwindcss -i ./src/common-class/tailwind.css -o ./src/common-class/style.css --watch"
 	}
 }
