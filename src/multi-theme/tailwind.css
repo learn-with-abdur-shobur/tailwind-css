@@ -7,6 +7,19 @@
 		--text-color-wh: #8c1313;
 		--text-color-dark: #000000;
 		--bg-color-has: #12357b;
+		--text-color-head: #12357b;
+		--text-color-para: #041332;
+		--bg-color-p: #c8c9cb;
+	}
+	.theme-dark {
+		--text-color-head: #d9dde4;
+		--text-color-para: #dddee0;
+		--bg-color-p: #041332;
+	}
+	.theme-solid {
+		--text-color-head: #2fe8ad;
+		--text-color-para: #2479e2;
+		--bg-color-p: #70056a;
 	}
 	.theme-s {
 		--text-color-wh: #151416;

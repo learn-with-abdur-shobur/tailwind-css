@@ -35,62 +35,121 @@
 					</p>
 				</div>
 				<!-- text - end -->
+				<div class="mb-2">
+					<button
+						class="px-3 py-1 text-blue-700 mx-2 bg-black rounded-sm"
+						id="button_base"
+					>
+						Dark
+					</button>
+					<button
+						class="px-3 py-1 text-blue-700 mx-2 bg-yellow-50 rounded-sm"
+						id="button_other"
+					>
+						Clear
+					</button>
+					<button
+						class="px-3 py-1 text-blue-700 mx-2 bg-black rounded-sm"
+						id="button_change"
+					>
+						Solid
+					</button>
+				</div>
 
-				<div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8">
+				<div
+					id="get_theme"
+					class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8"
+				>
 					<!-- stat - start -->
 					<div
-						class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 lg:p-8"
+						class="flex flex-col items-center justify-center rounded-lg bg-skin-p p-4 lg:p-8"
 					>
 						<div
-							class="text-xl font-bold text-skin-base sm:text-2xl md:text-3xl"
+							class="text-xl font-bold text-skin-head sm:text-2xl md:text-3xl"
 						>
 							200
 						</div>
-						<div class="text-sm font-semibold sm:text-base text-skin-base">
+						<div class="text-sm font-semibold sm:text-base text-skin-para">
 							People
 						</div>
 					</div>
 					<!-- stat - end -->
-
 					<!-- stat - start -->
 					<div
-						class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8"
+						class="flex flex-col items-center justify-center rounded-lg bg-skin-p p-4 lg:p-8"
 					>
 						<div
-							class="text-xl font-bold text-skin-base sm:text-2xl md:text-3xl"
+							class="text-xl font-bold text-skin-head sm:text-2xl md:text-3xl"
 						>
-							500+
+							200
 						</div>
-						<div class="text-sm font-semibold sm:text-base">People</div>
-					</div>
-
-					<!-- stat - start -->
-					<div
-						class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8"
-					>
-						<div
-							class="text-xl font-bold text-indigo-500 sm:text-2xl md:text-3xl"
-						>
-							1000+
+						<div class="text-sm font-semibold sm:text-base text-skin-para">
+							People
 						</div>
-						<div class="text-sm font-semibold sm:text-base">Customers</div>
 					</div>
 					<!-- stat - end -->
-
 					<!-- stat - start -->
 					<div
-						class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8"
+						class="flex flex-col items-center justify-center rounded-lg bg-skin-p p-4 lg:p-8"
 					>
 						<div
-							class="text-xl font-bold text-indigo-500 sm:text-2xl md:text-3xl"
+							class="text-xl font-bold text-skin-head sm:text-2xl md:text-3xl"
 						>
-							A couple
+							200
 						</div>
-						<div class="text-sm font-semibold sm:text-base">Coffee breaks</div>
+						<div class="text-sm font-semibold sm:text-base text-skin-para">
+							People
+						</div>
+					</div>
+					<!-- stat - end -->
+					<!-- stat - start -->
+					<div
+						class="flex flex-col items-center justify-center rounded-lg bg-skin-p p-4 lg:p-8"
+					>
+						<div
+							class="text-xl font-bold text-skin-head sm:text-2xl md:text-3xl"
+						>
+							200
+						</div>
+						<div class="text-sm font-semibold sm:text-base text-skin-para">
+							People
+						</div>
 					</div>
 					<!-- stat - end -->
 				</div>
 			</div>
 		</div>
+		<script>
+			const get_theme = document.getElementById('get_theme');
+			let clases = get_theme.classList;
+
+			document.getElementById('button_change').addEventListener('click', () => {
+				clases.forEach((e) => {
+					if (e === 'theme-solid') {
+						get_theme.classList.remove('theme-dark', 'theme-solid');
+					} else {
+						get_theme.classList.add('theme-solid');
+					}
+				});
+			});
+			document.getElementById('button_base').addEventListener('click', () => {
+				clases.forEach((e) => {
+					if (e === 'theme-dark') {
+						get_theme.classList.remove('theme-dark', 'theme-solid');
+					} else {
+						get_theme.classList.add('theme-dark');
+					}
+				});
+			});
+			document.getElementById('button_other').addEventListener('click', () => {
+				clases.forEach((e) => {
+					if (e === 'theme-dark' || 'theme-solid') {
+						get_theme.classList.remove('theme-dark', 'theme-solid');
+					} else {
+						get_theme.classList.add(' ');
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
