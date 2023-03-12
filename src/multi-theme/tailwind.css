@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--text-color-wh: #8c1313;
+		--text-color-dark: #000000;
+		--bg-color-has: #12357b;
+	}
+	.theme-s {
+		--text-color-wh: #151416;
+		--text-color-dark: #39ae0e;
+		--bg-color-has: #0e7132;
+	}
+	.theme-l {
+		--text-color-wh: #430285;
+		--text-color-dark: #39ae0e;
+		--bg-color-has: #0e7132;
+	}
+}
